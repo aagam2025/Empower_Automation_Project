@@ -2,7 +2,7 @@
 A scalable and maintainable end-to-end web automation testing framework built using Python, Playwright, and Pytest.
 This framework follows best practices such as the Page Object Model (POM) and a clean test structure to support reliable and efficient automated testing.
 
-🚀 **Tech Stack**:
+🚀 Tech Stack:
 • Python 3.14.2
 • Playwright (Python)
 • Pytest

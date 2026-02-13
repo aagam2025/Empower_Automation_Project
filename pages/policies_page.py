@@ -13,20 +13,17 @@ class policy(BasePage):
     def read_policies(self):
         policy_1 = self.page.locator('xpath=//*[@id="readResignBtnDiv-61"]/a').first
         
-        # wait for NEW TAB before clicking
         with self.page.context.expect_page() as pdf_page_info:
             policy_1.click()
 
         pdf_page = pdf_page_info.value
         
-        # ✅ Wait for PDF to render
         pdf_page.wait_for_load_state("load")
         pdf_page.wait_for_timeout(8000)
         pdf_page.close()
 
         self.page.wait_for_timeout(1000)
 
-    # Filter policies using xpath of the checkbox by clicking on it
     def filter_policies(self):
         filter_checkbox = self.page.locator('xpath=//*[@id="policieslistContainer"]/div/div[1]/div/div/div/div[2]/fieldset/div')
         filter_checkbox.click()
